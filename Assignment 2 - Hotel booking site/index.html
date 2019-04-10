@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <title>Earthside Hotel Search</title>
+</head>
+<body>
+  <script src="javascript.js"></script>
+  <div class="body_div">
+    <div class="logo_div">
+      <img class="logo" src="images/logo.png" alt="HomeAway logo">
+    </div>
+  <div class="header_div">
+  <h1>Earthside Hotel Search Engine</h1>
+</div>
+<div class="form_div">
+  <form class="form_box" id="hotelsForm">
+    <h3 class="search_title">Hotel Search Tools</h3>
+    <fieldset id="radios">
+      <legend>Desired star rating:</legend>
+      <label for="one_star"><input type="radio" id="one_star" name="stars" value="1" checked>★</label>
+      <br>
+      <label for="two_stars"><input type="radio" id="two_stars" name="stars" value="2">★★</label>
+      <br>
+      <label for="three_stars"><input type="radio" id="three_stars" name="stars" value="3">★★★</label>
+      <br>
+      <label for="four_stars"><input type="radio" id="four_stars" name="stars" value="4">★★★★</label>
+      <br>
+      <label for="five_stars"><input type="radio" id="five_stars" name="stars" value="5">★★★★★</label>
+    </fieldset>
+    <br>
+    <fieldset>
+      <label for="distance_slider">Preferred distance from city centre</label>
+      <br><br>
+      <input class ="slider" id = "distance_slider" type="range" min="0.5" max="10" step="0.5" value="0.5" oninput="distance_value.value = distance_slider.value + ' miles'">
+      <output class="distance_output" id="distance_value">0.5 miles</output>
+    </fieldset>
+    <br>
+    <fieldset>
+      <label for="slider">Ideal price per night:</label>
+      <br>
+      <input class="ppn" id = "slider" type="range" min="5" max="200" step="5" value="0" oninput="ppn_value.value = '£'+ slider.value">
+      <output class="distance_output" id="ppn_value">£5</output>
+    </fieldset>
+    <br>
+    <fieldset>
+      <label for="wifi_checkbox">WiFi?</label>
+      <input type="checkbox" id="wifi_checkbox" class="wifi_check">
+    </fieldset>
+    <br>
+    <fieldset>
+      <label for="pool_checkbox">Swimming pool?</label>
+      <input type="checkbox" id="pool_checkbox" class="pool_check">
+    </fieldset>
+    <button onclick="criteriaGrab()" class ="search_button" type="button">Search</button>
+  </form>
+</div>
+<div id="hotelResults" class="results_div">
+</div>
+</div>
+</body>
+</html>

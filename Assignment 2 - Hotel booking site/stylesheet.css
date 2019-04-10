@@ -1,0 +1,173 @@
+/* Fonts */
+@font-face {
+font-family: "Montserrat";
+src: url("fonts/montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+font-family: "Montserrat_med";
+src: url("fonts/montserrat/Montserrat-Medium.ttf");
+}
+
+/* Images */
+
+.logo_div{
+grid-column: 1 / span 1;
+border-style: solid;
+border-bottom-style: none;
+overflow: hidden;
+}
+
+.logo_div > img{
+  padding-left: 13px;
+  resize: both;
+  width: 60%;
+}
+/* Body */
+.body_div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(10vw 30vw 10vw);
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 10px;
+  min-width: 765px;
+}
+
+.form_div,
+.logo_div {
+  display: flex;
+  min-width: 100%;
+}
+
+.header_div,
+.logo_div{
+background: pink;
+min-height: 170px;
+}
+
+.logo_div,
+.header_div{
+align-items: center;
+justify-content: center;
+}
+
+/* Header */
+
+.header_div{
+  display: flex;
+  height: 10vw;
+  grid-column: 2 / span 4;
+  min-height: 100%;
+  border-style: solid;
+  border-bottom-style: none;
+  border-left-style: none;
+
+}
+
+h1, h2, h3, h4{
+font-family: "Montserrat";
+font-weight: 700;
+}
+
+p{
+  font-family: Montserrat_med;
+}
+
+/* Form */
+.form_div {
+  background-color: #eaeaea;
+  grid-column: 1 / span 1;
+  min-height: 600px;
+  max-height: 70vh;
+  border-style: solid;
+  border-right-style: none;
+}
+
+.search_title{
+  font-size: 20px;
+  font-family: Montserrat;
+  text-align: center;
+}
+
+label, legend{
+  font-family: Montserrat_med;
+  font-size: 15.5px;
+}
+
+.min_star{
+  margin-left: 10px;
+  width: 40px;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.ppn{
+  width: 80px;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+.distance_output,
+.star_rtng_output
+{
+  font-family: "Montserrat";
+  font-size: 12.5px;
+}
+
+.ppn_output{
+  font-family: "Montserrat";
+  font-size: 15px;
+}
+
+.slider{
+  width: 80px;
+}
+
+.search_button{
+  font-family: Montserrat;
+  font-size: 15px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  margin-top: 90px;
+  width: 200px;
+  overflow-x: auto;
+}
+
+fieldset{
+  border: none;
+}
+
+/* Results */
+
+.results_div {
+  grid-column: 2 / span 4;
+  border-style: solid;
+  min-height: 650px;
+  max-height: 650px;;
+  overflow-y: scroll;
+}
+
+.results_div > .hotel_result_div {
+  padding-left: 20px;
+}
+
+.results_div > .hotel_result_div > hr{
+  margin-right: 20px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.star_rating_p{
+  font-size: 25px;
+  color: gold;
+}
+
+.hotel_image{
+  float: right;
+  padding-right: 50px;
+  /* // Image size must be 250px by 174px // */
+}
